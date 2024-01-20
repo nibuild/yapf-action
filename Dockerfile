@@ -12,7 +12,11 @@ LABEL "maintainer"="Diego Valenzuela Iturra <diegovalenzuelaiturra@gmail.com>"
 RUN pip install --upgrade pip
 
 # upgrade yapf
-RUN pip install --upgrade yapf
+RUN \
+  if [ -z "$INPUTS_YAPF_VERSION" ]; then \
+    pip install "yapf==$INPUTS_YAPF_VERSION" \
+  else \
+  pip install --upgrade yapf
 
 # show YAPF version
 RUN echo $(yapf --version)

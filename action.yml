@@ -7,6 +7,10 @@ inputs:
     description: "yapf args"
     required: true
     default: . --verbose --parallel --recursive --in-place
+  yapf_version:
+    description: "yapf version"
+    required: false
+    default: "latest"
 
 runs:
   using: "docker"
