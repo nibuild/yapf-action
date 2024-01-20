@@ -14,9 +14,9 @@ RUN pip install --upgrade pip
 # upgrade yapf
 RUN \
   if [ -z "$INPUTS_YAPF_VERSION" ]; then \
-    pip install "yapf==$INPUTS_YAPF_VERSION"; \
-  else \
     pip install --upgrade yapf; \
+  else \
+    pip install "yapf==$INPUTS_YAPF_VERSION"; \
   fi
 
 # show YAPF version
