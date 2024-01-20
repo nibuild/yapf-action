@@ -16,7 +16,8 @@ RUN \
   if [ -z "$INPUTS_YAPF_VERSION" ]; then \
     pip install "yapf==$INPUTS_YAPF_VERSION" \
   else \
-  pip install --upgrade yapf
+    pip install --upgrade yapf \
+  fi
 
 # show YAPF version
 RUN echo $(yapf --version)
