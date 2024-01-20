@@ -9,6 +9,7 @@ LABEL "homepage"="https://github.com/diegovalenzuelaiturra/yapf-action"
 LABEL "maintainer"="Diego Valenzuela Iturra <diegovalenzuelaiturra@gmail.com>"
 
 RUN env
+RUN ls -la
 
 # upgrade pip
 RUN pip install --upgrade pip
